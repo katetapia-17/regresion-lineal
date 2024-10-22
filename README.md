@@ -15,7 +15,7 @@ df.describe()
 # Verificar si hay valores nulos
 df.isnull().sum()
 
-# Convertir las columnas categóricas en numéricas (One-Hot Encoding)
+# Convertir las columnas categóricas en numéricas 
 df = pd.get_dummies(df, drop_first=True)
 
 # Eliminar filas con valores nulos
@@ -23,7 +23,7 @@ df.dropna(inplace=True)
 
 from sklearn.model_selection import train_test_split
 
-# Definir X (variables independientes) e y (variable dependiente)
+# Definir X y Y
 X = df.drop('Selling_Price', axis=1)
 y = df['Selling_Price']
 
